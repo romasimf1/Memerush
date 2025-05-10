@@ -1,0 +1,45 @@
+{
+  "name": "memerush",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.9.0",
+    "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^6.7.0",
+    "@radix-ui/react-dialog": "^1.1.11",
+    "@radix-ui/react-label": "^2.1.4",
+    "@radix-ui/react-slot": "^1.2.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/formidable": "^3.4.5",
+    "bcryptjs": "^3.0.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "firebase": "^10.8.0",
+    "formidable": "^3.5.4",
+    "framer-motion": "^12.9.7",
+    "lucide-react": "^0.507.0",
+    "next": "^14.2.28",
+    "next-auth": "^4.24.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-swipeable": "^7.0.2",
+    "tailwind-merge": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.57",
+    "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.3.3"
+  }
+}
