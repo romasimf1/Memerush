@@ -45,19 +45,18 @@ export function Features() {
     <section id="features" className="py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+          <div className="inline-block mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full shadow-neon">
             <div className="flex items-center gap-2">
-              <Zap className="h-4 w-4 text-yellow-500" />
-              <span className="text-sm font-medium">Meme-making superpowers</span>
+              <Zap className="h-4 w-4 text-neonYellow animate-bounce" />
+              <span className="text-sm font-medium text-neonYellow">Meme-making superpowers</span>
             </div>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Everything You Need to Go Viral</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-neonPink via-neonYellow to-neonBlue text-transparent bg-clip-text animate-gradient-x drop-shadow-neon">Everything You Need to Go Viral</h2>
           <p className="text-lg text-gray-300">
             MemeRush combines the best social features with powerful creation tools, making it the ultimate platform for
             meme enthusiasts.
           </p>
         </div>
-
         <div
           ref={ref}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
@@ -70,18 +69,18 @@ export function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="relative group"
+              className="relative group animate-fade-in"
               style={{
                 transitionDelay: `${index * 0.1}s`,
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full hover:bg-white/10 transition-colors duration-300">
-                <div className="w-12 h-12 rounded-xl bg-[#1A1A2E] flex items-center justify-center mb-4">
+              <div className="absolute inset-0 bg-gradient-to-br from-neonPink/10 to-neonBlue/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative bg-glassDark backdrop-blur-md border border-neonBlue/20 rounded-2xl p-6 h-full hover:bg-white/10 transition-colors duration-300 shadow-neon">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-neonPink to-neonBlue flex items-center justify-center mb-4 shadow-neon animate-bounce-slow">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-white drop-shadow-neon">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             </div>
           ))}
