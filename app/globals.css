@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +10,27 @@ html, body {
   padding: 0;
   overscroll-behavior: none;
   scrollbar-width: none;
+  @apply bg-darkBg font-montserrat text-white min-h-screen;
+  background-image: theme('backgroundImage.aurora');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body::-webkit-scrollbar, html::-webkit-scrollbar {
   display: none !important;
+}
+
+h1, .title-main {
+  @apply text-6xl font-bold bg-gradient-to-r from-neonPink via-neonYellow to-neonBlue text-transparent bg-clip-text drop-shadow-lg;
+}
+
+h2 {
+  @apply text-2xl font-bold text-neonPink;
+}
+
+button, .btn-main {
+  @apply rounded-xl px-8 py-3 font-bold text-white text-lg bg-gradient-to-r from-neonPink to-neonBlue shadow-neon transition-transform duration-200;
+}
+
+button:hover, .btn-main:hover {
+  @apply scale-105 shadow-lg;
 } 
