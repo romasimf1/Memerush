@@ -29,10 +29,30 @@ h2 {
 
 button, .btn-main {
   @apply rounded-xl px-8 py-3 font-bold text-white text-lg bg-gradient-to-r from-neonPink to-neonBlue shadow-neon transition-transform duration-200;
+  filter: brightness(0.85) saturate(0.7);
+  box-shadow: 0 0 8px #39FF1433, 0 0 16px #FF4DFF33;
 }
 
 button:hover, .btn-main:hover {
-  @apply scale-105 shadow-lg;
+  @apply scale-105;
+  box-shadow: 0 0 16px #39FF1444, 0 0 32px #FF4DFF44;
+}
+
+.bg-glassDark, .shadow-neon, .drop-shadow-neon {
+  filter: brightness(0.92) saturate(0.7);
+  box-shadow: 0 0 8px #39FF1433, 0 0 16px #FF4DFF33;
+}
+
+.animate-bounce, .animate-bounce-slow, .animate-pulse {
+  opacity: 0.7;
+}
+
+.text-neonPink, .text-neonBlue, .text-neonGreen, .text-neonYellow {
+  opacity: 0.8;
+}
+
+.bg-gradient-to-r, .bg-gradient-to-br {
+  opacity: 0.85;
 }
 
 @layer utilities {
@@ -44,17 +64,11 @@ button:hover, .btn-main:hover {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
   }
-  .animate-bounce-slow {
-    animation: bounce 2.5s infinite;
-  }
   .animate-fade-in {
     animation: fadeIn 1.2s ease-in;
   }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(40px); }
     to { opacity: 1; transform: none; }
-  }
-  .drop-shadow-neon {
-    filter: drop-shadow(0 0 8px #39FF14) drop-shadow(0 0 16px #FF4DFF);
   }
 } 
