@@ -33,4 +33,28 @@ button, .btn-main {
 
 button:hover, .btn-main:hover {
   @apply scale-105 shadow-lg;
+}
+
+@layer utilities {
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 3s ease-in-out infinite;
+  }
+  @keyframes gradient-x {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .animate-bounce-slow {
+    animation: bounce 2.5s infinite;
+  }
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-in;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: none; }
+  }
+  .drop-shadow-neon {
+    filter: drop-shadow(0 0 8px #39FF14) drop-shadow(0 0 16px #FF4DFF);
+  }
 } 
